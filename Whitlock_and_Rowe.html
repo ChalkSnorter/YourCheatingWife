@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Whitlock &amp; Rowe LLP | Attorneys at Law</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F3F5F9;--surface:#FFFFFF;--ink:#14213D;--muted:#55607A;--line:#D5DAE6;
+  --accent:#1F4FD8;--accent-ink:#FFFFFF;--navy:#14213D;--navy-ink:#F3F5F9;--err:#B3261E;
+  --serif:"Newsreader",Georgia,"Times New Roman",serif;
+  --sans:"Public Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#0E1424;--surface:#161E33;--ink:#E8ECF5;--muted:#9AA5BF;--line:#2A3555;--accent:#6D8FFF;--accent-ink:#0E1424;--navy:#0A0F1C;--navy-ink:#E8ECF5;--err:#FF8A80}
+}
+:root[data-theme="dark"]{--bg:#0E1424;--surface:#161E33;--ink:#E8ECF5;--muted:#9AA5BF;--line:#2A3555;--accent:#6D8FFF;--accent-ink:#0E1424;--navy:#0A0F1C;--navy-ink:#E8ECF5;--err:#FF8A80}
+html{scroll-padding-top:env(safe-area-inset-top,0px);color-scheme:light dark}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.6 var(--sans)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+header.top{border-bottom:1px solid var(--line);background:var(--surface)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:68px}
+.brand{font:600 22px/1 var(--serif);letter-spacing:.2px;text-decoration:none}
+.brand span{color:var(--muted);font-weight:400}
+nav a{margin-left:24px;text-decoration:none;font-size:15px;color:var(--muted)}
+nav a:hover{color:var(--ink)}
+.hero{padding:72px 0 64px}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+h1{font:400 clamp(38px,5.2vw,62px)/1.06 var(--serif);margin:0 0 20px;letter-spacing:-.5px}
+.lede{font-size:18px;color:var(--muted);max-width:46ch;margin:0 0 28px}
+.btn{display:inline-block;border:0;border-radius:6px;background:var(--accent);color:var(--accent-ink);font:600 15px var(--sans);padding:13px 22px;cursor:pointer;text-decoration:none}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line);margin-left:10px}
+.login{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:32px;box-shadow:0 18px 40px -24px rgba(20,33,61,.45)}
+.login h2{font:600 26px/1.2 var(--serif);margin:0 0 4px}
+.login p.sub{margin:0 0 22px;color:var(--muted);font-size:14.5px}
+label{display:block;font-weight:500;font-size:14px;margin:0 0 6px}
+input{width:100%;font:400 16px var(--sans);padding:12px 14px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--ink);margin-bottom:16px}
+.err{min-height:22px;color:var(--err);font-size:14px;margin:-4px 0 10px}
+.login .btn{width:100%}
+.fine{font-size:12.5px;color:var(--muted);margin:14px 0 0}
+section.block{padding:64px 0;border-top:1px solid var(--line)}
+h2.sec{font:400 34px/1.15 var(--serif);margin:0 0 8px}
+.sec-sub{color:var(--muted);margin:0 0 36px;max-width:56ch}
+.areas{display:grid;grid-template-columns:repeat(2,1fr);gap:0 56px}
+.area{padding:20px 0;border-top:1px solid var(--line)}
+.area h3{font:600 20px/1.3 var(--serif);margin:0 0 4px}
+.area p{margin:0;color:var(--muted);font-size:15px}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.about p{margin:0 0 14px;color:var(--muted)}
+.facts{display:grid;gap:18px}
+.facts div{border-left:3px solid var(--accent);padding-left:16px}
+.facts b{display:block;font:600 20px var(--serif)}
+.facts span{color:var(--muted);font-size:14.5px}
+footer{background:var(--navy);color:var(--navy-ink);padding:44px 0 36px;font-size:14.5px}
+footer .wrap{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap}
+footer small{display:block;margin-top:24px;opacity:.7;max-width:70ch}
+/* portal */
+#portal{display:none;padding:48px 0 72px}
+.portal-head{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;margin-bottom:28px}
+.portal-head h1{font-size:clamp(30px,4vw,44px);margin:0}
+.tbl{width:100%;border-collapse:collapse;background:var(--surface);border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.tbl th,.tbl td{text-align:left;padding:14px 16px;border-bottom:1px solid var(--line);font-size:15px}
+.tbl th{font-weight:600;color:var(--muted);font-size:13.5px;background:var(--bg)}
+.tbl tr:last-child td{border-bottom:0}
+.tbl-wrap{overflow-x:auto}
+.pill{display:inline-block;padding:2px 10px;border-radius:99px;border:1px solid var(--line);font-size:13px}
+body.in .public{display:none}
+body.in #portal{display:block}
+@media (max-width:860px){
+  .hero .wrap,.about,.areas{grid-template-columns:1fr}
+  .hero{padding:44px 0}
+  nav a:not(.keep){display:none}
+}
+@media (prefers-reduced-motion:no-preference){.login{animation:rise .5s ease-out both}@keyframes rise{from{opacity:0;transform:translateY(8px)}}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top">Whitlock &amp; Rowe <span>LLP</span></a>
+    <nav>
+      <a class="public" href="#practice">Practice areas</a>
+      <a class="public" href="#firm">The firm</a>
+      <a class="public" href="#contact">Contact</a>
+      <a class="keep" href="#signin" id="navSign">Client portal</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero public">
+    <div class="wrap">
+      <div>
+        <h1>Counsel you can rely on when the outcome matters.</h1>
+        <p class="lede">Whitlock &amp; Rowe advises individuals, families and growing businesses on litigation, corporate matters and estate planning. Every client works directly with a partner.</p>
+        <a class="btn" href="#contact">Book a consultation</a><a class="btn ghost" href="#practice">Our practice areas</a>
+      </div>
+      <div class="login" id="signin">
+        <h2>Client portal</h2>
+        <p class="sub">Sign in to view your matters, documents and invoices.</p>
+        <div id="form" role="group" aria-label="Sign in">
+          <label for="u">Username</label>
+          <input id="u" autocomplete="username" spellcheck="false">
+          <label for="p">Password</label>
+          <input id="p" type="password" autocomplete="current-password">
+          <div class="err" id="err" role="alert" aria-live="polite"></div>
+          <button class="btn" id="go" type="button">Sign in</button>
+          <p class="fine">Having trouble signing in? Call the front desk on (555) 010-2200.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block public" id="practice">
+    <div class="wrap">
+      <h2 class="sec">Practice areas</h2>
+      <p class="sec-sub">Six areas, handled by attorneys who do this work every day.</p>
+      <div class="areas">
+        <div class="area"><h3>Civil litigation</h3><p>Contract disputes, property claims and commercial disagreements, from demand letter to trial.</p></div>
+        <div class="area"><h3>Corporate and commercial</h3><p>Formation, shareholder agreements, financing and day-to-day contracts for growing companies.</p></div>
+        <div class="area"><h3>Family law</h3><p>Divorce, custody and support, handled with discretion and a focus on practical outcomes.</p></div>
+        <div class="area"><h3>Wills, trusts and estates</h3><p>Estate plans, probate administration and guardianship, set up so your wishes are followed.</p></div>
+        <div class="area"><h3>Employment law</h3><p>Advice for employers and employees on contracts, terminations and workplace investigations.</p></div>
+        <div class="area"><h3>Real estate</h3><p>Purchases, sales, leases and title issues for homeowners, landlords and developers.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block public" id="firm">
+    <div class="wrap about">
+      <div>
+        <h2 class="sec">A small firm with a long memory</h2>
+        <p>Founded in 1994, Whitlock &amp; Rowe has stayed deliberately small. Clients deal with the same attorneys from the first call to the final order, and we return calls the same day.</p>
+        <p>We quote fees up front, explain the options in plain language, and tell you when a matter is better settled than fought.</p>
+      </div>
+      <div class="facts">
+        <div><b>30 years in practice</b><span>Serving clients across the region since 1994.</span></div>
+        <div><b>12 attorneys</b><span>Each with a focused practice and direct client contact.</span></div>
+        <div><b>Same-day replies</b><span>Calls and secure messages answered within one business day.</span></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<section id="portal" aria-live="polite">
+  <div class="wrap">
+    <div class="portal-head">
+      <div><p style="margin:0;color:var(--muted)">Signed in</p><h1 id="who">Welcome</h1></div>
+      <button class="btn ghost" id="out" type="button" style="margin:0">Sign out</button>
+    </div>
+    <div class="tbl-wrap">
+      <table class="tbl">
+        <thead><tr><th>Matter</th><th>Attorney</th><th>Status</th><th>Next step</th></tr></thead>
+        <tbody>
+          <tr><td>Cheese v. Harlan Supply</td><td>R. Whitlock</td><td><span class="pill">Discovery</span></td><td>Document production due 14 Nov</td></tr>
+          <tr><td>Estate planning review</td><td>M. Rowe</td><td><span class="pill">Drafting</span></td><td>Draft sent for your review</td></tr>
+          <tr><td>Lease renewal, 41 Mill Street</td><td>A. Okafor</td><td><span class="pill">Awaiting signature</span></td><td>Sign and return by 5 Nov</td></tr>
+          <tr><td>HCTF-FLAG(H0p3fullyW3D0ntG3tC4ught}</td><td>the good looking wife</td><td><span class="pill">married</span></td><td>McDonald’s date, she’s paying</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="wrap">
+    <div><strong>Whitlock &amp; Rowe LLP</strong><br>200 Harbor Street, Suite 900<br>Riverton, 00000</div>
+    <div>(555) 010-2200<br>intake@whitlockrowe.example<br>Mon to Fri, 8:30 to 5:30</div>
+  </div>
+  <div class="wrap"><small>Attorney advertising. Prior results do not guarantee a similar outcome. Contacting the firm does not create an attorney-client relationship.</small></div>
+</footer>
+
+<script>
+(function(){
+  var OK="1d9213a49c1ed7fe0c078589d2c90942b1d9166631d99d0fceeba7f81c00e9d2";
+  var u=document.getElementById("u"),p=document.getElementById("p"),err=document.getElementById("err");
+  function sha(s){return crypto.subtle.digest("SHA-256",new TextEncoder().encode(s)).then(function(b){return Array.from(new Uint8Array(b)).map(function(x){return x.toString(16).padStart(2,"0")}).join("")})}
+  function enter(name){
+    document.body.classList.add("in");
+    document.getElementById("who").textContent="Welcome, "+name;
+    window.scrollTo(0,0);
+  }
+  function leave(){
+    document.body.classList.remove("in");u.value="";p.value="";err.textContent="";
+    try{sessionStorage.removeItem("wr-user")}catch(e){}
+  }
+  function login(){
+    err.textContent="";
+    if(!u.value||!p.value){err.textContent="Enter your username and password.";return}
+    sha(u.value+":"+p.value).then(function(h){
+      if(h===OK){try{sessionStorage.setItem("wr-user",u.value)}catch(e){}enter(u.value)}
+      else{err.textContent="That username and password don’t match. Check both and try again.";p.value="";p.focus()}
+    }).catch(function(){err.textContent="Sign-in isn’t available in this browser. Open the page over HTTPS."});
+  }
+  document.getElementById("go").addEventListener("click",login);
+  [u,p].forEach(function(el){el.addEventListener("keydown",function(e){if(e.key==="Enter")login()})});
+  document.getElementById("out").addEventListener("click",leave);
+  document.getElementById("navSign").addEventListener("click",function(){setTimeout(function(){if(!document.body.classList.contains("in"))u.focus()},50)});
+  try{var s=sessionStorage.getItem("wr-user");if(s)enter(s)}catch(e){}
+})();
+</script>
+</body>
+</html>
